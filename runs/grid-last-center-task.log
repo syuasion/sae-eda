@@ -1,0 +1,41 @@
+/Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+3632 documents, 363200 feature rows
+SAE representations
+  sae        top3              1.8s f1=0.188 task_purity=0.054
+  sae_idf    top3              1.8s f1=0.067 task_purity=0.105
+  sae_idf    threshold         2.0s f1=0.057 task_purity=0.121
+  sae        kmeans            0.5s f1=0.118 task_purity=0.035
+  sae        kmedoids          0.2s f1=0.149 task_purity=0.032
+  sae        agglomerative     0.4s f1=0.250 task_purity=0.017
+  sae        spectral          1.1s f1=0.131 task_purity=0.040
+  sae_bin    kmeans            0.3s f1=0.120 task_purity=0.039
+  sae_bin    kmedoids          0.2s f1=0.156 task_purity=0.033
+  sae_bin    agglomerative     0.3s f1=0.259 task_purity=0.021
+  sae_bin    spectral          1.4s f1=0.137 task_purity=0.048
+  sae_idf    kmeans            0.4s f1=0.129 task_purity=0.039
+  sae_idf    kmedoids          0.2s f1=0.135 task_purity=0.037
+  sae_idf    agglomerative     0.3s f1=0.239 task_purity=0.029
+  sae_idf    spectral          2.2s f1=0.141 task_purity=0.041
+  sae_svd    kmeans            0.1s f1=0.117 task_purity=0.034
+  sae_svd    kmedoids          0.1s f1=0.142 task_purity=0.031
+  sae_svd    agglomerative     0.2s f1=0.136 task_purity=0.036
+  sae_svd    spectral          1.5s f1=0.122 task_purity=0.036
+  sae_svd    gmm               0.1s f1=0.117 task_purity=0.034
+  sae_svd    dbscan            0.2s f1=0.249 task_purity=0.011
+  sae_svd    hdbscan           9.6s f1=0.255 task_purity=0.017
+  sae_idf    nmf               3.3s f1=0.139 task_purity=0.037
+  sae        plsa              6.1s f1=0.167 task_purity=0.035
+  sae_bin    lda               3.3s f1=0.237 task_purity=0.019
+  sae_idf    lsa               0.1s f1=0.239 task_purity=0.020
+  sae_svd    bertopic         12.4s f1=0.255 task_purity=0.017
+  sae_svd    iforest           0.1s f1=nan task_purity=nan
+  sae_svd    lof               0.1s f1=nan task_purity=nan
+  sae_svd    ocsvm             0.3s f1=nan task_purity=nan
+Baselines
+  tfidf      top3              0.8s f1=0.058 task_purity=0.314
+  tfidf      kmeans            0.6s f1=0.206 task_purity=0.059
+  tfidf_svd  hdbscan           6.6s f1=0.103 task_purity=0.211
+  emb        kmeans            0.3s f1=0.127 task_purity=0.039
+  emb        hdbscan          10.2s f1=0.249 task_purity=0.018
+wrote results/terminal_wrench/trace-last-targeted-all-72d415/eda-center-task

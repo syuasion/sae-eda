@@ -1,0 +1,19 @@
+[project]
+name = "sae-eda"
+version = "0.1.0"
+description = "EDA on reward-hacking traces with Quail's AI.SAE_FEATURES"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    # upstream fsdatalab/quail main, pinned; bump on purpose and note it in RUNS.md
+    "quail-engine @ git+https://github.com/fsdatalab/quail@2a1fe4d297f545b4b509cf195fb9318e8039c971",
+    "modal==1.5.4",
+    "pandas==3.0.5",
+    "scikit-learn",
+    "scipy",
+    "umap-learn",
+    "hdbscan",
+    "bertopic",
+]
+
+[tool.uv]
+package = false

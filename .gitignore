@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
+
+# data: large or rebuilt from the scripts (SAE outputs also live on the Modal volume quail-results)
+inputs/
+results/
+
+# old write-up data no longer used by the page
+writeup/viz_data.json
+writeup/patterns.json
+writeup/chart.svg

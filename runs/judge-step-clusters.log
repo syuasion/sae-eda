@@ -1,0 +1,182 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/syuasion/main/ap-Z9en2UQxGUPOdIDUESnfsX
+✓ Created objects.
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/judge_modal.py
+├── 🔨 Created mount PythonPackage:modal_common
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/inputs
+└── 🔨 Created function judge.
+function call id: fc-01M65DXVAHN9N1ZTBS0FSPM3KZ
+/usr/local/lib/python3.12/site-packages/huggingface_hub/constants.py:299: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+
+[1AFetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]
+[1AFetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 409.19it/s]
+INFO 10-30 03:33:58 [quail] estimated clusters.examples: 66 documents, about 70,134 tokens from a 66 document sample, 0.0 s
+INFO 10-30 03:33:58 [quail] tokenizing clusters.examples (tokenizer: Gigatoken with character offsets)
+INFO 10-30 03:34:01 [quail] tokenized clusters.examples: 66 documents, 2.9 s, 23 documents/s, 70,134 tokens
+INFO 10-30 03:34:04 [quail][GPU 0] loading Qwen/Qwen3-32B-FP8 onto GPU 0, 78.7 of 79.2 GiB free
+
+[1AFetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Fetching 14 files: 100%|██████████| 14/14 [00:00<00:00, 1196.78it/s]
+WARNING 10-30 03:34:15 [vllm.py:1371] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 10-30 03:34:15 [vllm.py:1406] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+Loading safetensors checkpoint shards:   0% Completed | 0/7 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  14% Completed | 1/7 [00:01<00:11,  1.97s/it]
+Loading safetensors checkpoint shards:  29% Completed | 2/7 [00:04<00:10,  2.01s/it]
+Loading safetensors checkpoint shards:  43% Completed | 3/7 [00:05<00:07,  1.98s/it]
+Loading safetensors checkpoint shards:  57% Completed | 4/7 [00:07<00:05,  1.97s/it]
+Loading safetensors checkpoint shards:  71% Completed | 5/7 [00:09<00:03,  1.97s/it]
+Loading safetensors checkpoint shards:  86% Completed | 6/7 [00:11<00:01,  1.97s/it]
+Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:13<00:00,  1.97s/it]
+Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:13<00:00,  1.97s/it]
+
+INFO 10-30 03:34:35 [quail][GPU 0] kernels: warming cached filter and join kernels
+INFO 10-30 03:34:50 [quail][GPU 0] kernels: touch pass done in 14.72 s; waited 0.0 s for compilation
+INFO 10-30 03:34:51 [quail][GPU 0] captured 5 decode graphs in 1.18 s
+INFO 10-30 03:34:51 [quail][GPU 0] model ready, boot 47.44 s (cold)
+INFO 10-30 03:34:51 [quail][GPU 0] running the query
+INFO 10-30 03:34:51 [quail][GPU 0] loading the tokenizer of qwen3-32b-fp8 for AI.EXTRACT
+INFO 10-30 03:34:57 [quail][GPU 0] extract name.name done: 66/66 documents, 4.8 s, 14 documents/s, 77,715 fresh tokens
+name: {'wall_s': 5.87, 'fresh_tokens': 77715}
+INFO 10-30 03:34:57 [quail][GPU 0] estimated clusters.intrusion: 66 documents, about 83,826 tokens from a 66 document sample, 0.0 s
+INFO 10-30 03:34:57 [quail][GPU 0] tokenizing clusters.intrusion (tokenizer: Gigatoken)
+INFO 10-30 03:34:57 [quail][GPU 0] model ready, boot 0.0 s (warm)
+INFO 10-30 03:34:57 [quail][GPU 0] tokenized clusters.intrusion: 66 documents, 0.0 s, 8,769 documents/s, 83,826 tokens
+INFO 10-30 03:34:57 [quail][GPU 0] running the query
+INFO 10-30 03:34:57 [quail][GPU 0] label readout: head 151936 x 5120 in bfloat16, 6 targets, 1 rows per request, targets' logits
+INFO 10-30 03:35:02 [quail][GPU 0] pipeline c: 58/66 documents, 5.0 s, 12 documents/s
+INFO 10-30 03:35:02 [quail][GPU 0] pipeline c done: 66/66 documents, 5.5 s, 12 documents/s, 93,132 fresh tokens
+odd_one: {'wall_s': 5.47, 'fresh_tokens': 93132}
+INFO 10-30 03:35:02 [quail][GPU 0] model ready, boot 0.0 s (warm)
+INFO 10-30 03:35:02 [quail][GPU 0] running the query
+INFO 10-30 03:35:02 [quail][GPU 0] label readout: head 151936 x 5120 in bfloat16, 42 targets, 1 rows per request, normalized
+INFO 10-30 03:35:08 [quail][GPU 0] pipeline c: 66/66 documents, 5.3 s, 12 documents/s
+INFO 10-30 03:35:08 [quail][GPU 0] pipeline c done: 66/66 documents, 5.3 s, 12 documents/s, 90,924 fresh tokens
+category: {'wall_s': 5.35, 'fresh_tokens': 90924}
+INFO 10-30 03:35:08 [quail][GPU 0] model ready, boot 0.0 s (warm)
+INFO 10-30 03:35:08 [quail][GPU 0] running the query
+INFO 10-30 03:35:13 [quail][GPU 0] score useful done: 1/1 documents, 4.7 s, 0 documents/s, 78,005 fresh tokens
+useful: {'wall_s': 4.65, 'fresh_tokens': 78005}
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 977, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 187, in run_input_sync
+    values = io_context.call_function_sync()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/container_io_manager.py", line 265, in call_function_sync
+    expected_value_or_values = self.finalized_function.callable(*args, **kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/judge_modal.py", line 108, in judge
+    out.to_parquet(directory / "judge.parquet")
+  File "/usr/local/lib/python3.12/site-packages/pandas/core/frame.py", line 3135, in to_parquet
+    return to_parquet(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pandas/io/parquet.py", line 490, in to_parquet
+    impl.write(
+  File "/usr/local/lib/python3.12/site-packages/pandas/io/parquet.py", line 191, in write
+    table = self.api.Table.from_pandas(df, **from_pandas_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4769, in pyarrow.lib.Table.from_pandas
+  File "/usr/local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 656, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 644, in convert_column
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 638, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/array.pxi", line 408, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 91, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'float' object", 'Conversion failed for column odd_one_probabilities with type object')
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/dannytang/Developer/quail/sae_eda/judge_modal.py:124 in main          │
+│                                                                              │
+│   123 │   print(f"function call id: {call.object_id}", flush=True)           │
+│ ❱ 124 │   print(json.dumps(call.get(), indent=2))                            │
+│   125                                                                        │
+│                                                                              │
+│ /Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/ │
+│ modal/_object.py:46 in wrapped                                               │
+│                                                                              │
+│    45 │   │   await self.hydrate()                                           │
+│ ❱  46 │   │   return await method(self, *args, **kwargs)                     │
+│    47                                                                        │
+│                                                                              │
+│ /Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/ │
+│ modal/_functions.py:2139 in get                                              │
+│                                                                              │
+│   2138 │   │   """                                                           │
+│ ❱ 2139 │   │   return await self._invocation().poll_function(timeout=timeout │
+│   2140                                                                       │
+│                                                                              │
+│ /Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/ │
+│ modal/_functions.py:335 in poll_function                                     │
+│                                                                              │
+│    334 │   │                                                                 │
+│ ❱  335 │   │   return await _process_result(                                 │
+│    336 │   │   │   response.outputs[0].result, response.outputs[0].data_form │
+│                                                                              │
+│ /Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/ │
+│ modal/_utils/function_utils.py:572 in _process_result                        │
+│                                                                              │
+│   571 │   │   │                                                              │
+│ ❱ 572 │   │   │   raise exc_with_hints(exc)                                  │
+│   573                                                                        │
+│                                                                              │
+│     ...Remote call to Modal Function (ta-01M65DXVJZQ0B1DK19VB6YA9KR)...      │
+│                                                                              │
+│ /root/judge_modal.py:108 in judge                                            │
+│                                                                              │
+│ ❱ 108 out.to_parquet(directory / "judge.parquet")                            │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/pandas/core/frame.py:3135 in         │
+│ to_parquet                                                                   │
+│                                                                              │
+│ ❱ 3135 return to_parquet(                                                    │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/pandas/io/parquet.py:490 in          │
+│ to_parquet                                                                   │
+│                                                                              │
+│ ❱ 490 impl.write(                                                            │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/pandas/io/parquet.py:191 in write    │
+│                                                                              │
+│ ❱ 191 table = self.api.Table.from_pandas(df, **from_pandas_kwargs)           │
+│                                                                              │
+│                                                                              │
+│ pyarrow/table.pxi:4769 in pyarrow.lib.Table.from_pandas                      │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/pyarrow/pandas_compat.py:656 in      │
+│ dataframe_to_arrays                                                          │
+│                                                                              │
+│ ❱ 656 arrays = [convert_column(c, f)                                         │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/pyarrow/pandas_compat.py:644 in      │
+│ convert_column                                                               │
+│                                                                              │
+│ ❱ 644 raise e                                                                │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/pyarrow/pandas_compat.py:638 in      │
+│ convert_column                                                               │
+│                                                                              │
+│ ❱ 638 result = pa.array(col, type=type_, from_pandas=True, safe=safe)        │
+│                                                                              │
+│                                                                              │
+│ pyarrow/array.pxi:408 in pyarrow.lib.array                                   │
+│                                                                              │
+│                                                                              │
+│ pyarrow/array.pxi:91 in pyarrow.lib._ndarray_to_array                        │
+│                                                                              │
+│                                                                              │
+│ pyarrow/error.pxi:92 in pyarrow.lib.check_status                             │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ArrowTypeError: ("Expected bytes, got a 'float' object", 'Conversion failed for 
+column odd_one_probabilities with type object')

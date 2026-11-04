@@ -1,0 +1,21 @@
+/Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/scipy/sparse/_coo.py:62: RuntimeWarning: invalid value encountered in cast
+  self.coords = tuple(np.array(idx, copy=copy, dtype=idx_dtype)
+/Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/sklearn/decomposition/_nmf.py:1723: ConvergenceWarning: Maximum number of iterations 400 reached. Increase it to improve convergence.
+  warnings.warn(
+/Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/sklearn/decomposition/_nmf.py:1723: ConvergenceWarning: Maximum number of iterations 400 reached. Increase it to improve convergence.
+  warnings.warn(
+8724 steps of 3604 traces
+  sae       top3          k=3      1.8s f1=0.250 shuffled=0.250
+  sae_idf   top3          k=3      2.9s f1=0.093 shuffled=0.071
+  tfidf     top3          k=3      0.6s f1=0.143 shuffled=0.101
+  sae_idf   kmeans        k=25     1.7s f1=0.180 shuffled=0.131
+  sae_svd   kmeans        k=25     0.4s f1=0.176 shuffled=0.130
+  tfidf     kmeans        k=25     1.2s f1=0.223 shuffled=0.150
+  sae_svd   gmm           k=25     1.1s f1=0.179 shuffled=0.129
+  sae_idf   nmf           k=25     6.1s f1=0.180 shuffled=0.128
+  sae_idf   kmeans        k=50     2.1s f1=0.149 shuffled=0.101
+  sae_svd   kmeans        k=50     0.4s f1=0.153 shuffled=0.099
+  tfidf     kmeans        k=50     1.1s f1=0.197 shuffled=0.153
+  sae_svd   gmm           k=50     0.8s f1=0.147 shuffled=0.107
+  sae_idf   nmf           k=50    17.9s f1=0.159 shuffled=0.117
+wrote results/terminal_wrench/step-last-targeted-all-4a4463/steps-filter-random-matched

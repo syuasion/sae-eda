@@ -1,0 +1,47 @@
+/Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/sklearn/manifold/_spectral_embedding.py:325: UserWarning: Graph is not fully connected, spectral embedding may not work as expected.
+  warnings.warn(
+/Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/sklearn/manifold/_spectral_embedding.py:325: UserWarning: Graph is not fully connected, spectral embedding may not work as expected.
+  warnings.warn(
+/Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/sklearn/manifold/_spectral_embedding.py:325: UserWarning: Graph is not fully connected, spectral embedding may not work as expected.
+  warnings.warn(
+/Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+3632 documents, 65545628 feature rows
+SAE representations
+  sae        top3              1.9s f1=0.163 task_purity=0.322
+  sae_idf    top3              2.0s f1=0.076 task_purity=0.563
+  sae_idf    threshold         2.3s f1=0.074 task_purity=0.547
+  sae        kmeans            0.6s f1=0.205 task_purity=0.145
+  sae        kmedoids          0.3s f1=0.162 task_purity=0.115
+  sae        agglomerative     0.4s f1=0.252 task_purity=0.140
+  sae        spectral          0.8s f1=0.262 task_purity=0.153
+  sae_bin    kmeans            0.4s f1=0.208 task_purity=0.150
+  sae_bin    kmedoids          0.3s f1=0.143 task_purity=0.122
+  sae_bin    agglomerative     0.3s f1=0.239 task_purity=0.144
+  sae_bin    spectral          0.8s f1=0.239 task_purity=0.154
+  sae_idf    kmeans            0.3s f1=0.200 task_purity=0.148
+  sae_idf    kmedoids          0.2s f1=0.155 task_purity=0.124
+  sae_idf    agglomerative     0.3s f1=0.247 task_purity=0.138
+  sae_idf    spectral          0.9s f1=0.282 task_purity=0.151
+  sae_svd    kmeans            0.1s f1=0.185 task_purity=0.145
+  sae_svd    kmedoids          0.1s f1=0.149 task_purity=0.129
+  sae_svd    agglomerative     0.2s f1=0.208 task_purity=0.159
+  sae_svd    spectral          0.3s f1=0.271 task_purity=0.156
+  sae_svd    gmm               0.1s f1=0.189 task_purity=0.140
+  sae_svd    dbscan            0.1s f1=0.103 task_purity=0.941
+  sae_svd    hdbscan           9.1s f1=0.109 task_purity=0.796
+  sae_idf    nmf               2.1s f1=0.200 task_purity=0.146
+  sae        plsa              3.8s f1=0.193 task_purity=0.145
+  sae_bin    lda               4.3s f1=0.256 task_purity=0.112
+  sae_idf    lsa               0.1s f1=0.246 task_purity=0.110
+  sae_svd    bertopic         13.9s f1=0.109 task_purity=0.796
+  sae_svd    iforest           0.1s f1=nan task_purity=nan
+  sae_svd    lof               0.1s f1=nan task_purity=nan
+  sae_svd    ocsvm             0.4s f1=nan task_purity=nan
+Baselines
+  tfidf      top3              0.7s f1=0.110 task_purity=0.889
+  tfidf      kmeans            0.6s f1=0.185 task_purity=0.151
+  tfidf_svd  hdbscan           6.4s f1=0.110 task_purity=0.832
+  emb        kmeans            0.1s f1=0.191 task_purity=0.142
+  emb        hdbscan           9.8s f1=0.105 task_purity=0.830
+wrote results/terminal_wrench/trace-max-targeted-all-881158/eda-keep100-center-model

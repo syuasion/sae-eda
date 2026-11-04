@@ -1,0 +1,70 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/syuasion/main/ap-94EI0O0p6xDCZM8tIpZySK
+✓ Created objects.
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/quality_modal.py
+├── 🔨 Created mount PythonPackage:modal_common
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/inputs
+└── 🔨 Created function match.
+function call id: fc-01M6HS0SRAV1S5YY9BY5HG5TJP
+/usr/local/lib/python3.12/site-packages/huggingface_hub/constants.py:299: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+
+[1AFetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 799.94it/s]
+INFO 11-03 22:38:38 [quail] estimated t.prompt: 1,559 documents, about 2,299,739 tokens from a 1024 document sample, 0.5 s
+INFO 11-03 22:38:38 [quail] tokenizing t.prompt (tokenizer: Gigatoken)
+INFO 11-03 22:38:40 [quail] tokenized t.prompt: 1,559 documents, 1.9 s, 819 documents/s, 2,297,906 tokens
+INFO 11-03 22:38:42 [quail][GPU 0] loading Qwen/Qwen3-32B-FP8 onto GPU 0, 78.7 of 79.2 GiB free
+
+[1AFetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Fetching 14 files: 100%|██████████| 14/14 [00:00<00:00, 1566.79it/s]
+WARNING 11-03 22:38:51 [vllm.py:1371] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 11-03 22:38:51 [vllm.py:1406] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+Loading safetensors checkpoint shards:   0% Completed | 0/7 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  14% Completed | 1/7 [00:01<00:11,  1.95s/it]
+Loading safetensors checkpoint shards:  29% Completed | 2/7 [00:03<00:09,  1.99s/it]
+Loading safetensors checkpoint shards:  43% Completed | 3/7 [00:05<00:07,  1.98s/it]
+Loading safetensors checkpoint shards:  57% Completed | 4/7 [00:07<00:05,  1.96s/it]
+Loading safetensors checkpoint shards:  71% Completed | 5/7 [00:09<00:03,  1.96s/it]
+Loading safetensors checkpoint shards:  86% Completed | 6/7 [00:11<00:01,  1.95s/it]
+Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:13<00:00,  1.94s/it]
+Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:13<00:00,  1.96s/it]
+
+INFO 11-03 22:39:11 [quail][GPU 0] kernels: warming cached filter and join kernels
+INFO 11-03 22:39:26 [quail][GPU 0] kernels: touch pass done in 14.79 s; waited 0.0 s for compilation
+INFO 11-03 22:39:27 [quail][GPU 0] captured 5 decode graphs in 1.13 s
+INFO 11-03 22:39:27 [quail][GPU 0] model ready, boot 45.71 s (cold)
+INFO 11-03 22:39:27 [quail][GPU 0] running the query
+INFO 11-03 22:39:27 [quail][GPU 0] label readout: head 151936 x 5120 in bfloat16, 2 targets, 1 rows per request, targets' logits
+INFO 11-03 22:39:27 [quail][GPU 0] prefix sharing on t: 1559 documents borrow 1337024 tokens (tree built in 0.03 s)
+[W1103 22:39:28.640605038 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4653056, total: 85009367040).
+[W1103 22:39:30.275289785 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4653056, total: 85009367040).
+[W1103 22:39:30.546142085 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4653056, total: 85009367040).
+[W1103 22:39:31.362237514 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4653056, total: 85009367040).
+INFO 11-03 22:39:34 [quail][GPU 0] pipeline t: 124/1,559 documents, 6.2 s, 20 documents/s
+INFO 11-03 22:39:39 [quail][GPU 0] pipeline t: 247/1,559 documents, 11.4 s, 22 documents/s
+INFO 11-03 22:39:46 [quail][GPU 0] pipeline t: 436/1,559 documents, 19.1 s, 23 documents/s
+INFO 11-03 22:39:52 [quail][GPU 0] pipeline t: 562/1,559 documents, 24.4 s, 23 documents/s
+INFO 11-03 22:39:57 [quail][GPU 0] pipeline t: 689/1,559 documents, 29.6 s, 23 documents/s
+INFO 11-03 22:40:02 [quail][GPU 0] pipeline t: 813/1,559 documents, 34.9 s, 23 documents/s
+INFO 11-03 22:40:07 [quail][GPU 0] pipeline t: 936/1,559 documents, 40.1 s, 23 documents/s
+INFO 11-03 22:40:15 [quail][GPU 0] pipeline t: 1,126/1,559 documents, 48.0 s, 23 documents/s
+INFO 11-03 22:40:21 [quail][GPU 0] pipeline t: 1,252/1,559 documents, 53.3 s, 24 documents/s
+INFO 11-03 22:40:26 [quail][GPU 0] pipeline t: 1,375/1,559 documents, 58.5 s, 24 documents/s
+INFO 11-03 22:40:31 [quail][GPU 0] pipeline t: 1,499/1,559 documents, 63.7 s, 24 documents/s
+INFO 11-03 22:40:33 [quail][GPU 0] pipeline t done: 1,559/1,559 documents, 65.7 s, 24 documents/s, 1,041,950 fresh tokens
+result volume path: /vol/results/sae-eda/terminal_wrench/quality-63eb57
+{
+  "dataset": "terminal_wrench",
+  "model": "qwen3-32b-fp8",
+  "quail_sha": "2a1fe4d297f545b4b509cf195fb9318e8039c971",
+  "run_id": "quality-63eb57",
+  "trials_file": "pairs_traces20.parquet",
+  "trials": 1559,
+  "query": {
+    "wall_s": 65.79,
+    "fresh_tokens": 1041950
+  },
+  "total_s": 115.944419402
+}
+✓ App completed. View run at 
+https://modal.com/apps/syuasion/main/ap-94EI0O0p6xDCZM8tIpZySK

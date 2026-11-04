@@ -1,0 +1,17 @@
+/Users/dannytang/Developer/quail/sae_eda/.venv/lib/python3.12/site-packages/scipy/sparse/_coo.py:62: RuntimeWarning: invalid value encountered in cast
+  self.coords = tuple(np.array(idx, copy=copy, dtype=idx_dtype)
+8724 steps of 3604 traces
+  sae       top3          k=3      2.4s f1=0.271 shuffled=0.259
+  sae_idf   top3          k=3      2.8s f1=0.110 shuffled=0.063
+  tfidf     top3          k=3      0.6s f1=0.143 shuffled=0.101
+  sae_idf   kmeans        k=25     1.5s f1=0.235 shuffled=0.155
+  sae_svd   kmeans        k=25     0.2s f1=0.227 shuffled=0.146
+  tfidf     kmeans        k=25     1.3s f1=0.223 shuffled=0.150
+  sae_svd   gmm           k=25     1.2s f1=0.234 shuffled=0.143
+  sae_idf   nmf           k=25     2.8s f1=0.241 shuffled=0.150
+  sae_idf   kmeans        k=50     1.6s f1=0.193 shuffled=0.127
+  sae_svd   kmeans        k=50     0.2s f1=0.196 shuffled=0.117
+  tfidf     kmeans        k=50     0.9s f1=0.197 shuffled=0.153
+  sae_svd   gmm           k=50     0.8s f1=0.204 shuffled=0.113
+  sae_idf   nmf           k=50     8.1s f1=0.212 shuffled=0.128
+wrote results/terminal_wrench/step-max-targeted-all-keep100-20b9eb/steps-filter-random-matched

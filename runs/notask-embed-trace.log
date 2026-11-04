@@ -1,0 +1,26 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/syuasion/main/ap-X5oijmnQNPccp82SHLjULV
+✓ Created objects.
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/embed_modal.py
+├── 🔨 Created mount PythonPackage:modal_common
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/inputs
+└── 🔨 Created function embed.
+function call id: fc-01M653V0252TJY13PGP28MBJXS
+/usr/local/lib/python3.12/site-packages/huggingface_hub/constants.py:299: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+
+[1ALoading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+[1ALoading weights:  19%|█▉        | 59/310 [00:00<00:00, 543.16it/s]
+[1ALoading weights:  75%|███████▌  | 234/310 [00:00<00:00, 1134.17it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 1235.65it/s]
+result volume path: /vol/results/sae-eda/terminal_wrench_notask/embed-trace
+{
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "max_tokens": 8192,
+  "documents": 3632,
+  "truncated": 174,
+  "total_s": 145.154000364
+}
+[modal-client] 2026-10-29T17:40:20-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/syuasion/main/ap-X5oijmnQNPccp82SHLjULV

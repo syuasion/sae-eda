@@ -1,0 +1,66 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/syuasion/main/ap-yw5o0zMoA2qI2PVcRsY5DJ
+✓ Created objects.
+├── 🔨 Created mount 
+│   /Users/dannytang/Developer/quail/sae_eda/sae_extract_modal.py
+├── 🔨 Created mount PythonPackage:modal_common
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/inputs
+└── 🔨 Created function extract.
+function call id: fc-01M653TZT8ZJMBZDFG85CFAQ2W
+/usr/local/lib/python3.12/site-packages/huggingface_hub/constants.py:299: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+
+[1AFetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s]Fetching 8 files: 100%|██████████| 8/8 [00:00<00:00, 884.52it/s]
+INFO 10-30 00:37:39 [quail] estimated docs.body: 3,632 documents, about 12,562,662 tokens from a 1024 document sample, 1.1 s
+INFO 10-30 00:37:39 [quail] tokenizing docs.body (tokenizer: Gigatoken)
+INFO 10-30 00:37:41 [quail] tokenized docs.body: 3,632 documents, 2.2 s, 1,672 documents/s, 12,739,412 tokens
+INFO 10-30 00:37:43 [quail][GPU 0] loading Qwen/Qwen3.5-2B-Base onto GPU 0, 78.7 of 79.2 GiB free
+
+[1AFetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 1298.64it/s]
+WARNING 10-30 00:37:57 [model.py:981] Model does not support mm_device_do_normalize, forcing mm_device_do_normalize = False.
+[ERROR] `min_frames` is part of Qwen3VLVideoProcessorInitKwargs, but not documented. Make sure to add it to the docstring of the function in /usr/local/lib/python3.12/site-packages/transformers/models/qwen3_vl/video_processing_qwen3_vl.py.
+[ERROR] `max_frames` is part of Qwen3VLVideoProcessorInitKwargs, but not documented. Make sure to add it to the docstring of the function in /usr/local/lib/python3.12/site-packages/transformers/models/qwen3_vl/video_processing_qwen3_vl.py.
+WARNING 10-30 00:37:58 [vllm.py:1371] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 10-30 00:37:58 [vllm.py:1406] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+WARNING 10-30 00:37:58 [qwen_gdn_linear_attn.py:174] FlashInfer GDN prefill is JIT-compiled; first run may take a while. Set --gdn-prefill-backend triton to skip JIT.
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.77s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.77s/it]
+
+INFO 10-30 00:38:02 [quail][GPU 0] kernels: warming cached filter and join kernels
+WARNING 10-30 00:38:06 [op.py:338] Priority not set for op rms_norm, using native implementation.
+INFO 10-30 00:38:17 [quail][GPU 0] kernels: touch pass done in 15.64 s; waited 0.0 s for compilation
+INFO 10-30 00:38:17 [quail][GPU 0] model ready, boot 34.3 s (cold)
+INFO 10-30 00:38:18 [quail][GPU 0] running the query
+INFO 10-30 00:38:23 [quail][GPU 0] pipeline t: 389/3,632 documents, 5.3 s, 73 documents/s
+INFO 10-30 00:38:29 [quail][GPU 0] pipeline t: 772/3,632 documents, 10.5 s, 73 documents/s
+INFO 10-30 00:38:34 [quail][GPU 0] pipeline t: 1,164/3,632 documents, 15.8 s, 74 documents/s
+INFO 10-30 00:38:39 [quail][GPU 0] pipeline t: 1,576/3,632 documents, 21.0 s, 75 documents/s
+INFO 10-30 00:38:44 [quail][GPU 0] pipeline t: 1,980/3,632 documents, 26.2 s, 76 documents/s
+INFO 10-30 00:38:49 [quail][GPU 0] pipeline t: 2,433/3,632 documents, 31.4 s, 78 documents/s
+INFO 10-30 00:38:55 [quail][GPU 0] pipeline t: 2,827/3,632 documents, 36.6 s, 77 documents/s
+INFO 10-30 00:39:00 [quail][GPU 0] pipeline t: 3,164/3,632 documents, 41.8 s, 76 documents/s
+INFO 10-30 00:39:05 [quail][GPU 0] pipeline t: 3,543/3,632 documents, 47.1 s, 75 documents/s
+INFO 10-30 00:39:06 [quail][GPU 0] pipeline t done: 3,632/3,632 documents, 47.9 s, 76 documents/s, 12,790,260 fresh tokens
+{
+  "dataset": "terminal_wrench_notask",
+  "unit": "trace",
+  "pooling": "max",
+  "prompt": "targeted",
+  "template": "{0}\n\nHow did the agent get the task to pass?",
+  "limit": 0,
+  "model": "qwen3.5-2b-sae-bf16",
+  "quail_sha": "2a1fe4d297f545b4b509cf195fb9318e8039c971",
+  "run_id": "trace-max-targeted-all-64b415",
+  "documents": 3632,
+  "feature_rows": 62078519,
+  "total_s": 98.08011407400001,
+  "wall_s": 50.85,
+  "fresh_tokens": 12790260,
+  "gpu_s": null
+}
+result volume path: /vol/results/sae-eda/terminal_wrench_notask/trace-max-targeted-all-64b415
+[modal-client] 2026-10-29T17:39:36-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/syuasion/main/ap-yw5o0zMoA2qI2PVcRsY5DJ

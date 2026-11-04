@@ -1,0 +1,60 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/syuasion/main/ap-pwrO1H2hskFKsil85xtTZX
+✓ Created objects.
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/quality_modal.py
+├── 🔨 Created mount PythonPackage:modal_common
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/inputs
+└── 🔨 Created function match.
+function call id: fc-01M6HT5R50HH38V6269M40K9Q5
+/usr/local/lib/python3.12/site-packages/huggingface_hub/constants.py:299: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+
+[1AFetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 788.53it/s]
+INFO 11-03 22:58:49 [quail] estimated t.prompt: 600 documents, about 894,875 tokens from a 600 document sample, 0.5 s
+INFO 11-03 22:58:49 [quail] tokenizing t.prompt (tokenizer: Gigatoken)
+INFO 11-03 22:58:52 [quail] tokenized t.prompt: 600 documents, 2.4 s, 245 documents/s, 894,875 tokens
+INFO 11-03 22:58:53 [quail][GPU 0] loading Qwen/Qwen3-32B-FP8 onto GPU 0, 78.7 of 79.2 GiB free
+
+[1AFetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Fetching 14 files: 100%|██████████| 14/14 [00:00<00:00, 1324.56it/s]
+WARNING 11-03 22:59:04 [vllm.py:1371] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 11-03 22:59:04 [vllm.py:1406] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+Loading safetensors checkpoint shards:   0% Completed | 0/7 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  14% Completed | 1/7 [00:02<00:12,  2.01s/it]
+Loading safetensors checkpoint shards:  29% Completed | 2/7 [00:04<00:10,  2.04s/it]
+Loading safetensors checkpoint shards:  43% Completed | 3/7 [00:06<00:07,  2.00s/it]
+Loading safetensors checkpoint shards:  57% Completed | 4/7 [00:07<00:05,  1.97s/it]
+Loading safetensors checkpoint shards:  71% Completed | 5/7 [00:09<00:03,  1.95s/it]
+Loading safetensors checkpoint shards:  86% Completed | 6/7 [00:11<00:01,  1.94s/it]
+Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:13<00:00,  1.93s/it]
+Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:13<00:00,  1.96s/it]
+
+INFO 11-03 22:59:23 [quail][GPU 0] kernels: warming cached filter and join kernels
+INFO 11-03 22:59:38 [quail][GPU 0] kernels: touch pass done in 14.66 s; waited 0.0 s for compilation
+INFO 11-03 22:59:39 [quail][GPU 0] captured 5 decode graphs in 0.99 s
+INFO 11-03 22:59:39 [quail][GPU 0] model ready, boot 45.81 s (cold)
+INFO 11-03 22:59:39 [quail][GPU 0] running the query
+INFO 11-03 22:59:39 [quail][GPU 0] label readout: head 151936 x 5120 in bfloat16, 2 targets, 1 rows per request, targets' logits
+INFO 11-03 22:59:39 [quail][GPU 0] prefix sharing on t: 600 documents borrow 465392 tokens (tree built in 0.01 s)
+INFO 11-03 22:59:45 [quail][GPU 0] pipeline t: 107/600 documents, 5.7 s, 19 documents/s
+INFO 11-03 22:59:52 [quail][GPU 0] pipeline t: 270/600 documents, 13.4 s, 20 documents/s
+INFO 11-03 22:59:57 [quail][GPU 0] pipeline t: 380/600 documents, 18.5 s, 21 documents/s
+INFO 11-03 23:00:05 [quail][GPU 0] pipeline t: 543/600 documents, 26.2 s, 21 documents/s
+INFO 11-03 23:00:07 [quail][GPU 0] pipeline t done: 600/600 documents, 28.4 s, 21 documents/s, 460,683 fresh tokens
+result volume path: /vol/results/sae-eda/terminal_wrench/quality-20bdbd
+{
+  "dataset": "terminal_wrench",
+  "model": "qwen3-32b-fp8",
+  "quail_sha": "2a1fe4d297f545b4b509cf195fb9318e8039c971",
+  "run_id": "quality-20bdbd",
+  "trials_file": "pairs_traces_last.parquet",
+  "trials": 600,
+  "query": {
+    "wall_s": 28.44,
+    "fresh_tokens": 460683
+  },
+  "total_s": 79.40302940000001
+}
+[modal-client] 2026-11-03T15:00:19-0800 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/syuasion/main/ap-pwrO1H2hskFKsil85xtTZX

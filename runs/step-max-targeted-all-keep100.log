@@ -1,0 +1,91 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/syuasion/main/ap-oG22ZOYj5KiJhL33N48Ymm
+✓ Created objects.
+├── 🔨 Created mount 
+│   /Users/dannytang/Developer/quail/sae_eda/sae_extract_modal.py
+├── 🔨 Created mount PythonPackage:modal_common
+├── 🔨 Created mount /Users/dannytang/Developer/quail/sae_eda/inputs
+└── 🔨 Created function extract.
+function call id: fc-01M65AC0DZW4MKVZ2R6VDFNAZF
+/usr/local/lib/python3.12/site-packages/huggingface_hub/constants.py:299: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+
+[1AFetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s]Fetching 8 files: 100%|██████████| 8/8 [00:00<00:00, 483.00it/s]
+INFO 10-30 02:31:44 [quail] estimated docs0.body: 4,000 documents, about 1,250,803 tokens from a 1024 document sample, 0.7 s
+INFO 10-30 02:31:44 [quail] tokenizing docs0.body (tokenizer: Gigatoken)
+INFO 10-30 02:31:47 [quail] tokenized docs0.body: 4,000 documents, 2.2 s, 1,787 documents/s, 1,422,609 tokens
+INFO 10-30 02:31:48 [quail][GPU 0] loading Qwen/Qwen3.5-2B-Base onto GPU 0, 78.7 of 79.2 GiB free
+
+[1AFetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 872.22it/s]
+WARNING 10-30 02:32:04 [model.py:981] Model does not support mm_device_do_normalize, forcing mm_device_do_normalize = False.
+[ERROR] `min_frames` is part of Qwen3VLVideoProcessorInitKwargs, but not documented. Make sure to add it to the docstring of the function in /usr/local/lib/python3.12/site-packages/transformers/models/qwen3_vl/video_processing_qwen3_vl.py.
+[ERROR] `max_frames` is part of Qwen3VLVideoProcessorInitKwargs, but not documented. Make sure to add it to the docstring of the function in /usr/local/lib/python3.12/site-packages/transformers/models/qwen3_vl/video_processing_qwen3_vl.py.
+WARNING 10-30 02:32:06 [vllm.py:1371] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 10-30 02:32:06 [vllm.py:1406] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+WARNING 10-30 02:32:06 [qwen_gdn_linear_attn.py:174] FlashInfer GDN prefill is JIT-compiled; first run may take a while. Set --gdn-prefill-backend triton to skip JIT.
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.96s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.96s/it]
+
+INFO 10-30 02:32:11 [quail][GPU 0] kernels: warming cached filter and join kernels
+WARNING 10-30 02:32:16 [op.py:338] Priority not set for op rms_norm, using native implementation.
+INFO 10-30 02:32:28 [quail][GPU 0] kernels: touch pass done in 17.33 s; waited 0.0 s for compilation
+INFO 10-30 02:32:28 [quail][GPU 0] model ready, boot 40.25 s (cold)
+INFO 10-30 02:32:28 [quail][GPU 0] running the query
+INFO 10-30 02:32:34 [quail][GPU 0] pipeline t: 1,906/3,999 documents, 5.4 s, 353 documents/s
+INFO 10-30 02:32:37 [quail][GPU 0] pipeline t done: 3,999/3,999 documents, 8.0 s, 502 documents/s, 1,478,546 fresh tokens
+chunk 0: 400000 rows kept
+INFO 10-30 02:32:49 [quail][GPU 0] estimated docs1.body: 4,000 documents, about 1,279,494 tokens from a 1024 document sample, 0.0 s
+INFO 10-30 02:32:49 [quail][GPU 0] tokenizing docs1.body (tokenizer: Gigatoken)
+INFO 10-30 02:32:49 [quail][GPU 0] model ready, boot 0.0 s (warm)
+INFO 10-30 02:32:49 [quail][GPU 0] tokenized docs1.body: 4,000 documents, 0.0 s, 135,565 documents/s, 1,324,751 tokens
+INFO 10-30 02:32:49 [quail][GPU 0] running the query
+INFO 10-30 02:32:54 [quail][GPU 0] pipeline t: 3,076/4,000 documents, 5.1 s, 600 documents/s
+INFO 10-30 02:32:55 [quail][GPU 0] pipeline t done: 4,000/4,000 documents, 5.8 s, 685 documents/s, 1,380,751 fresh tokens
+chunk 1: 400000 rows kept
+INFO 10-30 02:33:09 [quail][GPU 0] estimated docs2.body: 4,000 documents, about 1,540,351 tokens from a 1024 document sample, 0.0 s
+INFO 10-30 02:33:09 [quail][GPU 0] tokenizing docs2.body (tokenizer: Gigatoken)
+INFO 10-30 02:33:09 [quail][GPU 0] model ready, boot 0.02 s (warm)
+INFO 10-30 02:33:09 [quail][GPU 0] tokenized docs2.body: 4,000 documents, 0.0 s, 99,787 documents/s, 1,449,625 tokens
+INFO 10-30 02:33:09 [quail][GPU 0] running the query
+INFO 10-30 02:33:14 [quail][GPU 0] pipeline t: 3,268/3,999 documents, 5.6 s, 582 documents/s
+INFO 10-30 02:33:15 [quail][GPU 0] pipeline t done: 3,999/3,999 documents, 6.1 s, 657 documents/s, 1,505,545 fresh tokens
+chunk 2: 400000 rows kept
+INFO 10-30 02:33:28 [quail][GPU 0] estimated docs3.body: 4,000 documents, about 1,047,909 tokens from a 1024 document sample, 0.0 s
+INFO 10-30 02:33:28 [quail][GPU 0] tokenizing docs3.body (tokenizer: Gigatoken)
+INFO 10-30 02:33:28 [quail][GPU 0] model ready, boot 0.02 s (warm)
+INFO 10-30 02:33:28 [quail][GPU 0] tokenized docs3.body: 4,000 documents, 0.0 s, 109,573 documents/s, 1,317,000 tokens
+INFO 10-30 02:33:28 [quail][GPU 0] running the query
+INFO 10-30 02:33:34 [quail][GPU 0] pipeline t: 3,628/3,998 documents, 5.5 s, 655 documents/s
+INFO 10-30 02:33:34 [quail][GPU 0] pipeline t done: 3,998/3,998 documents, 5.6 s, 718 documents/s, 1,372,790 fresh tokens
+chunk 3: 400000 rows kept
+INFO 10-30 02:33:47 [quail][GPU 0] estimated docs4.body: 3,432 documents, about 1,138,164 tokens from a 1024 document sample, 0.0 s
+INFO 10-30 02:33:47 [quail][GPU 0] tokenizing docs4.body (tokenizer: Gigatoken)
+INFO 10-30 02:33:47 [quail][GPU 0] model ready, boot 0.02 s (warm)
+INFO 10-30 02:33:47 [quail][GPU 0] tokenized docs4.body: 3,432 documents, 0.0 s, 97,733 documents/s, 1,125,631 tokens
+INFO 10-30 02:33:47 [quail][GPU 0] running the query
+INFO 10-30 02:33:52 [quail][GPU 0] pipeline t done: 3,432/3,432 documents, 4.7 s, 727 documents/s, 1,173,679 fresh tokens
+chunk 4: 343200 rows kept
+result volume path: /vol/results/sae-eda/terminal_wrench/step-max-targeted-all-keep100-20b9eb
+{
+  "dataset": "terminal_wrench",
+  "unit": "step",
+  "pooling": "max",
+  "prompt": "targeted",
+  "template": "{0}\n\nHow did the agent get the task to pass?",
+  "limit": 0,
+  "keep": 100,
+  "returned_rows": 146744950,
+  "model": "qwen3.5-2b-sae-bf16",
+  "quail_sha": "2a1fe4d297f545b4b509cf195fb9318e8039c971",
+  "run_id": "step-max-targeted-all-keep100-20b9eb",
+  "documents": 19432,
+  "feature_rows": 1943200,
+  "total_s": 140.275493244,
+  "wall_s": 36.61,
+  "fresh_tokens": 6911311,
+  "gpu_s": 0
+}
+✓ App completed. View run at 
+https://modal.com/apps/syuasion/main/ap-oG22ZOYj5KiJhL33N48Ymm
